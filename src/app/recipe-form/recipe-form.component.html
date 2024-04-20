@@ -1,0 +1,46 @@
+<!-- Recipe Form -->
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+  
+    <label>
+      Description:
+      <input type="text" formControlName="description">
+    </label>
+  
+    <label>
+      Ingredients:
+      <input type="text" formControlName="ingredients">
+    </label>
+  
+    <label>
+      Instructions:
+      <input type="text" formControlName="instructions">
+    </label>
+  
+    <div formGroupName="nutritionalFacts">
+      <label>
+        Calories:
+        <input type="text" formControlName="calories">
+      </label>
+  
+      <label>
+        Protein:
+        <input type="text" formControlName="protein">
+      </label>
+  
+      <label>
+        Carbs:
+        <input type="text" formControlName="carbs">
+      </label>
+  
+      <label>
+        Fat:
+        <input type="text" formControlName="fat">
+      </label>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
